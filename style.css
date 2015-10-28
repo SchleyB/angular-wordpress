@@ -1,0 +1,96 @@
+
+/*
+Theme Name: Angular Theme
+Theme URI:
+Author: Sly Barrack
+Author URI:
+Description: AngularJS WP theme tutorial
+Version: 1.0
+*/
+
+html, body, input, select, textarea
+{
+    font-size: 1.05em !important;
+}
+
+div#hero {
+    background: linear-gradient(270deg, #18d4a4, #4715b4, #13a0dc, #1350dc);
+    background-size: 800% 800%;
+    -webkit-animation: AnimationName 16s ease infinite;
+    -moz-animation: AnimationName 16s ease infinite;
+    -o-animation: AnimationName 16s ease infinite;
+    animation: AnimationName 16s ease infinite;
+    margin-top: -21px;
+}
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes slideInRight {
+    from    { transform:translateX(100%); }
+    to      { transform: translateX(0); }
+}
+@keyframes slideOutLeft {
+    to      { transform: translateX(-100%); }
+}
+
+.ng-enter       { z-index: 8888; }
+.ng-leave       { z-index: 9999; }
+
+
+h1.hero-text {
+    text-align: center;
+    font-size: 98px;
+    padding: 8%;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+#projects h3 {
+    text-align: center;
+    font-size: 35px;
+    padding: 2%;
+}
+
+#projects img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+#projects h5, p {
+    text-align: center;
+}
+
+#projects .col-md-4 {
+    text-align: center;
+}
+
+.page p,h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+}
+
+.navbar {
+    padding: 10px 0;
+}
+
+.ng-enter        { animation:slideInRight 0.5s both ease-in; }
+.ng-leave        { animation:slideOutLeft 0.5s both ease-in; }
+
