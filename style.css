@@ -22,6 +22,7 @@ div#hero {
     animation: AnimationName 16s ease infinite;
     margin-top: -21px;
 }
+
 @-webkit-keyframes AnimationName {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
@@ -42,29 +43,18 @@ div#hero {
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
-@keyframes slideInRight {
-    from    { transform:translateX(100%); }
-    to      { transform: translateX(0); }
-}
-@keyframes slideOutLeft {
-    to      { transform: translateX(-100%); }
-}
-
-.ng-enter       { z-index: 8888; }
-.ng-leave       { z-index: 9999; }
-
 
 h1.hero-text {
     text-align: center;
-    font-size: 98px;
+    font-size: 5em;
     padding: 8%;
     font-weight: bold;
     opacity: 0.8;
 }
 
-#projects h3 {
+#projects h4 {
     text-align: center;
-    font-size: 35px;
+    font-size: 1.5em;
     padding: 2%;
 }
 
@@ -75,8 +65,9 @@ h1.hero-text {
     margin: auto;
 }
 
-#projects h5, p {
+#projects {
     text-align: center;
+    margin-top: 4%;
 }
 
 #projects .col-md-4 {
@@ -94,3 +85,53 @@ h1.hero-text {
 .ng-enter        { animation:slideInRight 0.5s both ease-in; }
 .ng-leave        { animation:slideOutLeft 0.5s both ease-in; }
 
+img#angularIcon {
+    max-width: 50px;
+    float: left;
+    margin-top: -15px;
+}
+
+a.navbar-brand {
+    width: 300px;
+}
+
+span#nav-head {
+    margin-left: 10px;
+}
+
+@media(max-width: 767px){
+    h1.hero-text {
+        font-size: 3em;
+    }
+}
+
+div#projects {
+    text-align: center;
+}
+
+h3#post-title {
+    padding: 3% 0;
+}
+
+p#post-content {
+    padding: 0 5% 0 0;
+    text-align: left;
+}
+
+#projects div {
+    padding: 5% 0;
+}
+
+.page img {
+    max-width: 400px;
+}
+
+div#footer-text {
+    text-align: center;
+}
+
+/*** Admin Styles ***/
+
+.customize-control .thumbnail-image {
+    width: 100px;
+}

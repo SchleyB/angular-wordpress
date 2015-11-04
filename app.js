@@ -12,16 +12,16 @@ wp.config(function($routeProvider){
 
         .when('/', {
             controller: 'mainController',
-            templateUrl:'wp-content/themes/angular/main.html'
+            templateUrl:'wp-content/themes/angular/main.php'
         })
 
         .when('/posts', {
             controller: 'postController',
-            templateUrl:'wp-content/themes/angular/posts.html'
+            templateUrl:'wp-content/themes/angular/posts.php'
         })
         .when('/page/:num', {
             controller: 'pageController',
-            templateUrl:'wp-content/themes/angular/page.html'
+            templateUrl:'wp-content/themes/angular/page.php'
         })
 
 });
@@ -30,16 +30,22 @@ wp.controller('navController', ['$scope', '$log', '$http', function($scope, $log
 
     $scope.nav = $http.get($scope.site + "/wp-json/wp/v2/pages").success(function(response){
         $scope.data = response;
-        $log.info($scope.data);
     });
 
 }]);
 
 wp.controller('mainController', ['$scope', '$log', '$http', function($scope, $log, $http){
 
-    $scope.pageAPI = $http.get($scope.site + "/wp-json/wp/v2/pages").success(function(response){
+    $scope.heroText = window.heroText;
+    $scope.projectOneImage = window.projectOneImage;
+    $scope.projectOneHeader = window.projectOneHeader;
+    $scope.projectOneText = window.projectOneText;
+    $scope.projectTwoImage = window.projectTwoImage;
+    $scope.projectTwoHeader = window.projectTwoHeader;
+    $scope.projectTwoText = window.projectTwoText;
+
+    $scope.wpAPI = $http.get($scope.site + "/wp-json/wp/v2/posts").success(function(response){
         $scope.data = response;
-        $log.info($scope.data);
     });
 
 }]);
